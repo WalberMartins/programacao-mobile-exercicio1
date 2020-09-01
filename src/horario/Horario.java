@@ -54,6 +54,17 @@ public class Horario {
 			segundos++;
 	}
 	
+	public void incrementaMinuto() {
+		segundos += 60;
+	}
+	
+	public void incrementaHora() {
+		if(getHora() == 23)
+			segundos -= 3600 * 23;
+		else
+			segundos += 3600;
+	}
+	
 	private boolean ehUltimoSegundo() {
 		int ultimoSegundo = 86399;
 		if(segundos == ultimoSegundo)

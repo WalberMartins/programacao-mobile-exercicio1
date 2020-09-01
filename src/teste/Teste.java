@@ -5,10 +5,12 @@ import horario.Horario;
 public class Teste {
 	
 	public static void main(String[] args) {
-		Horario horario = new Horario(22, 58, 0);
+		Horario horario = new Horario();
 		
-		for(int i = 0; i <= 120; i++) {
+		for(int i = 0; i <= 60; i++) {
 			System.out.println(horario);
+			horario.incrementaHora();
+			horario.incrementaMinuto();
 			horario.incrementaSegundo();
 		}
 		
