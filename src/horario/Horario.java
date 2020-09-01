@@ -55,7 +55,12 @@ public class Horario {
 	}
 	
 	public void incrementaMinuto() {
-		segundos += 60;
+		if(getMinuto() == 59) {
+			segundos -= 60 * 59;
+			incrementaHora();
+		}
+		else
+			segundos += 60;
 	}
 	
 	public void incrementaHora() {

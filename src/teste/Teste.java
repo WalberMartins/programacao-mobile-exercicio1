@@ -7,11 +7,9 @@ public class Teste {
 	public static void main(String[] args) {
 		Horario horario = new Horario();
 		
-		for(int i = 0; i <= 60; i++) {
+		for(int i = 0; i <= 2000; i++) {
 			System.out.println(horario);
-			horario.incrementaHora();
 			horario.incrementaMinuto();
-			horario.incrementaSegundo();
 		}
 		
 	}
