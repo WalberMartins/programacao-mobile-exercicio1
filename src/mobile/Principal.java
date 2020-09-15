@@ -8,32 +8,29 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class Principal {
+	
 	public static void main(String[] args) {
 
-		Relogio r = new Relogio(28, 2, 2001, 13, 52, 0);
-		System.out.println(r);
-
-//		for(int i = 0; i < 86400 * 2; i++) {
-//			r.tictac();
-//			System.out.println(r);
-//		}
-
+		Horario horario = new Horario(21, 17, 54);
+		
+		System.out.println(horario);
+		
 		try {
-			FileOutputStream fileOut = new FileOutputStream(new File("C:\\Users\\Public\\Relogio.txt"));
+			FileOutputStream fileOut = new FileOutputStream(new File("./horario.txt"));
 			ObjectOutputStream out = new ObjectOutputStream(fileOut);
-			out.writeObject(r);
+			out.writeObject(horario);
 			out.close();
 			fileOut.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
-		Relogio RelogiofromFile = null;
+		Horario HorarioFromFile = null;
 		
 		try {
-			FileInputStream fileIn = new FileInputStream(new File("C:\\Users\\Public\\Relogio.txt"));
+			FileInputStream fileIn = new FileInputStream(new File("./horario.txt"));
 			ObjectInputStream in = new ObjectInputStream(fileIn);
-			RelogiofromFile = (Relogio) in.readObject();
+			HorarioFromFile = (Horario) in.readObject();
 			in.close();
 			fileIn.close();
 		}
@@ -46,6 +43,6 @@ public class Principal {
 			return;
 		}
 		
-		System.out.println(RelogiofromFile);
+		System.out.println(HorarioFromFile);
 	}
 }
