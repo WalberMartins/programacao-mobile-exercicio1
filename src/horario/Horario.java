@@ -2,7 +2,7 @@ package horario;
 
 public class Horario {
 	
-	public int segundos;
+	private int segundos;
 	
 	public Horario() {
 		segundos = 0;
