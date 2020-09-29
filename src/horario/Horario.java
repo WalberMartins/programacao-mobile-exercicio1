@@ -9,9 +9,9 @@ public class Horario {
 	}
 	
 	public Horario(int hora, int minuto, int segundo) {
-		setHora(hora);
-		setMinuto(minuto);
 		setSegundo(segundo);
+		setMinuto(minuto);
+		setHora(hora);
 	}
 	
 	public int getHora() {
@@ -21,7 +21,7 @@ public class Horario {
 	public void setHora(int hora) {
 		if(!(hora >= 0 && hora <= 23))
 			throw new IllegalStateException("Hora inválida");
-		segundos += hora * 3600;
+		segundos = hora * 3600 + (segundos - (getHora() * 3600));
 	}
 	
 	public int getMinuto() {
@@ -32,7 +32,7 @@ public class Horario {
 		if(!(minuto >= 0 && minuto <= 59)) {
 			throw new IllegalStateException("Minuto inválido");
 		}
-		segundos += minuto * 60;
+		segundos = minuto * 60 + (segundos - (getMinuto() * 60));
 	}
 	
 	public int getSegundo() {
@@ -43,7 +43,7 @@ public class Horario {
 		if(!(segundo >= 0 && segundo <= 59)) {
 			throw new IllegalStateException("Segundo inválido");
 		}
-		segundos += segundo;
+	    segundos =  segundo + (segundos - getSegundo());
 	}
 	
 	public void incrementaSegundo() {
@@ -71,10 +71,7 @@ public class Horario {
 	}
 	
 	private boolean ehUltimoSegundo() {
-		int ultimoSegundo = 86399;
-		if(segundos == ultimoSegundo)
-			return true;
-		return false;
+		return segundos == 86399;
 	}
 
 	private int[] converterTempo() {
