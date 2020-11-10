@@ -1,10 +1,9 @@
-# programacao-mobile-exercicio1
-Tipo de dado abstrato - Horário
+# Atividades de programação mobile
 
-Instruções:
+Atividades:
 
-* Deve possuir um único atributo privado de nome ‘segundos’ cujo domínio de valores pertence ao conjunto {0,..., 86399}
-* Deve possuir as operações: getHora, setHora, getMinuto, setMinuto, getSegundo, setSegundo, incrementaSegundo, incrementaMinuto, IncrementaHora, ehUltimoSegundo.
-* Deve possuir os construtores necessários
-* Deve permitir exibir seu estado. 
+- [atividade 1](https://github.com/WalberMartins/programacao-mobile-exercicios/tree/exercicio1)
+
+- [atividade 2](https://github.com/WalberMartins/programacao-mobile-exercicios/tree/exercicio2)
+
 
