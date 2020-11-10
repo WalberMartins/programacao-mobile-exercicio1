@@ -1,9 +1,5 @@
-# Atividades de programação mobile
+# Instruções
 
-Atividades:
-
-- [atividade 1](https://github.com/WalberMartins/programacao-mobile-exercicios/tree/exercicio1)
-
-- [atividade 2](https://github.com/WalberMartins/programacao-mobile-exercicios/tree/exercicio2)
-
+Criar um aplicativo android utilizando-se do tutorial disponível em 
+https://developer.android.com/training/basics/firstapp
 
