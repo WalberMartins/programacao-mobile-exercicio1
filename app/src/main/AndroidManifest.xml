@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
-        <activity
-            android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+        <activity android:name=".ThirdActivity"
+            android:label="@string/screen3">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".SecondActivity"
+            android:label="@string/screen2" >
+        </activity>
+        <activity android:name=".MainActivity"
+                  android:label="@string/main_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
